@@ -89,6 +89,7 @@ class UIElements extends StatelessWidget {
         TextFormField(
           controller: usernameController,
           keyboardType: TextInputType.emailAddress,
+          autovalidate: false,
           decoration: const InputDecoration(
             border: UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.blue, width: 2.0),
@@ -112,6 +113,7 @@ class UIElements extends StatelessWidget {
         TextFormField(
           controller: passwordController,
           obscureText: true,
+          autovalidate: false,
           decoration: const InputDecoration(
             border: UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.blue, width: 2.0),
@@ -149,7 +151,7 @@ class UIElements extends StatelessWidget {
 
   Widget getLoginButton(context) {
     return GestureDetector(
-      onTap: loginAttempt(
+      onTap: () => loginAttempt(
           context, usernameController.text, passwordController.text),
       child: Container(
         width: MediaQuery.of(context).size.width * 2 / 5,
