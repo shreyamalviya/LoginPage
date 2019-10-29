@@ -14,7 +14,7 @@ class UIElements extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            getTextMeddu(),
+            getTitleText(),
             getBlankSpace(MediaQuery.of(context).size.width * 1 / 10),
             getLoginForm(context),
           ],
@@ -23,9 +23,9 @@ class UIElements extends StatelessWidget {
     );
   }
 
-  Widget getTextMeddu() {
+  Widget getTitleText() {
     return Text(
-      'MEDDU',
+      'WELCOME',
       style: TextStyle(
         color: Colors.white,
         fontSize: 30.0,
